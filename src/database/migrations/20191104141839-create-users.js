@@ -21,9 +21,13 @@ module.exports = {
     },
     password_hash: {
       type: Sequelize.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     path_avatar: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    },
+    token: {
       type: Sequelize.STRING,
       allowNull: true,
     },

@@ -22,6 +22,7 @@ module.exports = {
     "arrow-parens": "off",
     "no-throw-literal": "off",
     "no-param-reassign": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "object-curly-newline": "off",
   },
 };
