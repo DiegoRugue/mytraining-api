@@ -30,7 +30,7 @@ class User extends Model {
     });
 
     this.addHook('afterSave', user => {
-      user.pathAvatar = `http://localhost:3340/${user.pathAvatar}`;
+      user.pathAvatar = `${process.env.URL_UPLOADS}/${user.pathAvatar}`;
 
       return this;
     });
@@ -38,7 +38,7 @@ class User extends Model {
     this.addHook('afterFind', user => {
       if (user) {
         user.displayName = `${user.firstName} ${user.lastName}`;
-        user.pathAvatar = `http://localhost:3340/${user.pathAvatar}`;
+        user.pathAvatar = `${process.env.URL_UPLOADS}/${user.pathAvatar}`;
       }
 
       return this;

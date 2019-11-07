@@ -14,7 +14,7 @@ class UserService {
 
   static async uploadFile(file) {
     const config = {
-      url: 'http://localhost:3340/file',
+      url: `${process.env.URL_UPLOADS}/file`,
       method: 'POST',
       data: { file },
     };
