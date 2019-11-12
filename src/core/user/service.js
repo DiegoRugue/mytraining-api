@@ -6,7 +6,10 @@ class UserService {
   static async store(user) {
     await this.checkUserEmail(user.email);
 
-    user.pathAvatar = await this.uploadFile(user.avatar);
+    if (user.avatar) {
+      user.pathAvatar = await this.uploadFile(user.avatar);
+    }
+
     const newUser = await UserRepository.store(user);
 
     return SessionService.generateToken(newUser);
@@ -19,9 +22,7 @@ class UserService {
       data: { file },
     };
     const { data } = await axios(config);
-    if (data) return data;
-
-    throw { code: 401, message: 'Fail upload image' };
+    return data;
   }
 
   static async checkUserEmail(email) {
