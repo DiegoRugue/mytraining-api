@@ -1,6 +1,6 @@
-import request from 'supertest';
-import app from '../src/app';
-import truncate from './helper/truncate';
+const request = require('supertest');
+const app = require('../src/app');
+const truncate = require('./helper/truncate');
 
 describe('Session', () => {
 

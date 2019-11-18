@@ -1,9 +1,9 @@
-import './bootstrap';
-import express from 'express';
-import routes from './routes';
-import response from './middlewares/response';
+require('./bootstrap');
+require('./database');
 
-import './database';
+const express = require('express');
+const routes = require('./routes');
+const response = require('./middlewares/response');
 
 class App {
   constructor() {
@@ -22,4 +22,4 @@ class App {
   }
 }
 
-export default new App().server;
+module.exports = new App().server;

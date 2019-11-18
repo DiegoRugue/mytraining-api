@@ -1,6 +1,6 @@
-import axios from 'axios';
-import UserRepository from './repository';
-import SessionService from '../session/service';
+const axios = require('axios');
+const UserRepository = require('./repository');
+const SessionService = require('../session/service');
 
 class UserService {
   static async store(user) {
@@ -34,4 +34,4 @@ class UserService {
   }
 }
 
-export default UserService;
+module.exports = UserService;

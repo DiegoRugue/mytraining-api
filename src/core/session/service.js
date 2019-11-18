@@ -1,6 +1,6 @@
-import jwt from 'jsonwebtoken';
-import config from '../../config/auth';
-import UserRepository from '../user/repository';
+const jwt = require('jsonwebtoken');
+const config = require('../../config/auth');
+const UserRepository = require('../user/repository');
 
 class SessionService {
   static async store(email, password, token) {
@@ -47,4 +47,4 @@ class SessionService {
   }
 }
 
-export default SessionService;
+module.exports = SessionService;

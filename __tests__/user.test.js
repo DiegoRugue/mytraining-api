@@ -1,7 +1,7 @@
-import request from 'supertest';
-import app from '../src/app';
-import avatar from './helper/avatar';
-import truncate from './helper/truncate';
+const request = require('supertest');
+const app = require('../src/app');
+const avatar = require('./helper/avatar');
+const truncate = require('./helper/truncate');
 
 describe('User', () => {
 

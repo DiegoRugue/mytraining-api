@@ -1,4 +1,4 @@
-import SessionService from './service';
+const SessionService = require('./service');
 
 class SessionController {
   static async store(req, res) {
@@ -10,4 +10,4 @@ class SessionController {
   }
 }
 
-export default SessionController;
+module.exports = SessionController;

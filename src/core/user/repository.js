@@ -1,4 +1,4 @@
-import User from '../models/User';
+const User = require('../models/User');
 
 class UserRepository {
   static async store(user) {
@@ -20,4 +20,4 @@ class UserRepository {
   }
 }
 
-export default UserRepository;
+module.exports = UserRepository;
