@@ -15,7 +15,7 @@ describe('User', () => {
       .send({
         firstName: 'Diego',
         lastName: 'Rugue',
-        email: 'diego@teste.com',
+        email: 'user@teste.com',
         password: '1234',
         avatar,
       });
@@ -29,7 +29,7 @@ describe('User', () => {
       .send({
         firstName: 'Diego',
         lastName: 'Rugue',
-        email: 'diego@teste.com',
+        email: 'user@teste.com',
         password: '1234',
       });
 
@@ -38,7 +38,7 @@ describe('User', () => {
       .send({
         firstName: 'Diego',
         lastName: 'Rugue',
-        email: 'diego@teste.com',
+        email: 'user@teste.com',
         password: '1234',
       });
 

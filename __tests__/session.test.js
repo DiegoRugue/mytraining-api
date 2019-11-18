@@ -14,14 +14,14 @@ describe('Session', () => {
       .send({
         firstName: 'Diego',
         lastName: 'Rugue',
-        email: 'diego1@teste.com',
+        email: 'session@teste.com',
         password: '1234',
       });
 
     const response = await request(app)
       .post('/session')
       .send({
-        email: 'diego1@teste.com',
+        email: 'session@teste.com',
         password: '1234',
       });
 
@@ -34,7 +34,7 @@ describe('Session', () => {
       .send({
         firstName: 'Diego',
         lastName: 'Rugue',
-        email: 'diego1@teste.com',
+        email: 'session@teste.com',
         token: '1234',
       });
 
