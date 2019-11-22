@@ -15,14 +15,14 @@ describe('Session', () => {
         firstName: 'Diego',
         lastName: 'Rugue',
         email: 'session@teste.com',
-        password: '1234',
+        password: '12345678',
       });
 
     const response = await request(app)
       .post('/session')
       .send({
         email: 'session@teste.com',
-        password: '1234',
+        password: '12345678',
       });
 
     expect(response.body).toHaveProperty('token');
@@ -52,7 +52,7 @@ describe('Session', () => {
       .post('/session')
       .send({
         email: 'teste@teste.com',
-        password: '1234',
+        password: '12345678',
       });
 
     expect(response.status).toBe(404);

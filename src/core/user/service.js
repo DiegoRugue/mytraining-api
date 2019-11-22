@@ -1,9 +1,11 @@
 const axios = require('axios');
+const UserScope = require('./scope');
 const UserRepository = require('./repository');
 const SessionService = require('../session/service');
 
 class UserService {
   static async store(user) {
+    await UserScope.store(user);
     await this.checkUserEmail(user.email);
 
     if (user.avatar) {

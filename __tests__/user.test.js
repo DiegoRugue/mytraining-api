@@ -16,7 +16,7 @@ describe('User', () => {
         firstName: 'Diego',
         lastName: 'Rugue',
         email: 'user@teste.com',
-        password: '1234',
+        password: '12345678',
         avatar,
       });
 
@@ -30,7 +30,7 @@ describe('User', () => {
         firstName: 'Diego',
         lastName: 'Rugue',
         email: 'user@teste.com',
-        password: '1234',
+        password: '12345678',
       });
 
     const response = await request(app)
@@ -39,7 +39,7 @@ describe('User', () => {
         firstName: 'Diego',
         lastName: 'Rugue',
         email: 'user@teste.com',
-        password: '1234',
+        password: '12345678',
       });
 
     expect(response.status).toBe(401);
